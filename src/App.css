@@ -11,6 +11,13 @@ body {
   color: white !important;
 }
 
+h1 span {
+  color: var(--secondary-color);
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(0.1s + 0.075s * var(--i));
+}
+
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -40,6 +47,16 @@ body {
   text-align: center;
   margin-top: 20px;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: slideTop 0.8s ease forwards;
+  animation-delay: 1s;
+}
+
+.contact-subtitle::before {
+  content: "";
+  animation: slideTop 1s ease-in-out;
+  animation-delay: 2s;
 }
 
 .thanks-box {
@@ -49,4 +66,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.hero-img {
+  position: relative;
+}
+
+.hero-img img {
+  opacity: 0;
+  animation: zoomIn 1s ease forwards, floatImg 4s ease-in-out infinite;
+  animation-delay: 1.9s;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-img img {
+    padding-top: 20px;
+  }
 }
