@@ -1,5 +1,6 @@
 import HeroImage from "./assets/hero-logo-3.png";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 interface LetterStyles extends React.CSSProperties {
   "--i": string;
@@ -10,7 +11,7 @@ function App() {
     <>
       <div className="App">
         <div className="section">
-          <div className="container contact-container">
+          <div className=" contact-container">
             {/* <div className="triangle-container">
               <div id="contact-triangle-bottomright"></div>
               <div id="contact-triangle-bottomright-accent"></div>
@@ -44,7 +45,15 @@ function App() {
                     alt="hero"
                   />
                 </div>
-                <button>Back to Site</button>
+                <button
+                  className="back-to-site-btn"
+                  onClick={() => {
+                    window.location.href =
+                      "https://jordanready.github.io/my-portfolio-website/";
+                  }}
+                >
+                  Back to Site
+                </button>
               </div>
             </div>
           </div>

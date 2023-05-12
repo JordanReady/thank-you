@@ -78,6 +78,14 @@ h1 span {
   animation-delay: 1.9s;
 }
 
+.back-to-site-btn {
+  position: absolute;
+  bottom: 10px;
+  opacity: 0;
+  animation: zoomIn 1s ease forwards;
+  animation-delay: 2.3s;
+}
+
 @media screen and (max-width: 768px) {
   .hero-img img {
     padding-top: 20px;
