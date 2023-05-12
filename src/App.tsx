@@ -1,6 +1,10 @@
 import HeroImage from "./assets/hero-logo-3.png";
 import "./App.css";
 
+interface LetterStyles extends React.CSSProperties {
+  "--i": string;
+}
+
 function App() {
   return (
     <>
@@ -18,16 +22,16 @@ function App() {
             <div className="contact-inner-container">
               <div className="thanks-box">
                 <h1 className="contact-title">
-                  <span style={{ "--i": "1" }}>T</span>
-                  <span style={{ "--i": "2" }}>h</span>
-                  <span style={{ "--i": "3" }}>a</span>
-                  <span style={{ "--i": "4" }}>n</span>
-                  <span style={{ "--i": "5" }}>k</span>
-                  <span style={{ "--i": "6" }}> </span>
-                  <span style={{ "--i": "7" }}>Y</span>
-                  <span style={{ "--i": "8" }}>o</span>
-                  <span style={{ "--i": "9" }}>u</span>
-                  <span style={{ "--i": "10" }}>!</span>
+                  <span style={{ "--i": "1" } as LetterStyles}>T</span>
+                  <span style={{ "--i": "2" } as LetterStyles}>h</span>
+                  <span style={{ "--i": "3" } as LetterStyles}>a</span>
+                  <span style={{ "--i": "4" } as LetterStyles}>n</span>
+                  <span style={{ "--i": "5" } as LetterStyles}>k</span>
+                  <span style={{ "--i": "6" } as LetterStyles}> </span>
+                  <span style={{ "--i": "7" } as LetterStyles}>Y</span>
+                  <span style={{ "--i": "8" } as LetterStyles}>o</span>
+                  <span style={{ "--i": "9" } as LetterStyles}>u</span>
+                  <span style={{ "--i": "10" } as LetterStyles}>!</span>
                 </h1>
                 <p className="contact-subtitle">
                   Your message has been sent! I will get back to you as soon as
@@ -40,6 +44,7 @@ function App() {
                     alt="hero"
                   />
                 </div>
+                <button>Back to Site</button>
               </div>
             </div>
           </div>
